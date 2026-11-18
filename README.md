@@ -87,6 +87,10 @@ Details of each tab, contribution methods and the live-data caveats are in `prot
 
 Usernames and handles in that sample had already been replaced with `@user`, and author IDs were not retained. Before this repository was committed, tweet IDs, status URLs and place metadata were also removed so that individual posts cannot be looked up. Post text and timestamps remain, because the dashboard needs them.
 
+## AI assistance
+
+The analysis code in this repository is the student's own work. The tests, the GitHub Actions workflow and the README, and the anonymisation of the live-post samples, were added with AI assistance.
+
 ## Licence notes
 
 The UCI dataset is CC BY 4.0 (Zhao et al., 2015, DOI 10.24432/C5CP7V). Please cite that source if you reuse the data or results that depend on it.
