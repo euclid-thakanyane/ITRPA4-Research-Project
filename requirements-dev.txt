@@ -1,0 +1,2 @@
+# Test runner (CI and local). Install on top of requirements.txt.
+pytest>=8.0

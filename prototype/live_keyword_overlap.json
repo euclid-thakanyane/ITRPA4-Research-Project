@@ -1,0 +1,655 @@
+{
+  "source": "Public X (Twitter) posts retrieved 13 Nov 2026 via the X search and recent-counts APIs, anonymised (no usernames or author IDs retained), for illustration only in the Live X demo tab. This live sample is not part of the evaluated dissertation results, which use the UCI influenza outbreak dataset (Zhao, 2015). There is no full-archive counts tool in the available X connector (only get_posts_counts_recent, which covers the last 7 days). search_posts_all was used for the 14 Oct–13 Nov post sample and for mid-month outbreak-signal daily volumes; that search endpoint caps each call at 25 posts even if a higher max_results is requested. The X search API does not accept since: in the query string; windows were sent as start_time/end_time. Self-reported illness phrases were paired with flu or respiratory context (flu OR fever OR cough OR 'sore throat' OR chills). Confounders (COVID, RSV, stomach flu) and avian influenza (bird flu / H5N1) are tagged separately for filtering and are not mixed into seasonal-flu outbreak totals.",
+  "retrieved_at": "2026-11-13T12:49:00Z",
+  "retrieved_at_sast": "2026-11-13 14:49:00 SAST (Africa/Johannesburg)",
+  "dataset_keyword_source": "flu_keywords from the UCI influenza outbreak .mat file (525 tokens)",
+  "n_dataset_keywords": 525,
+  "n_live_posts_flu_relevant": 960,
+  "n_keywords_appearing_in_live_posts": 450,
+  "n_posts_with_at_least_one_dataset_keyword": 956,
+  "match_rule": "Case-insensitive word-boundary match against each dataset keyword, allowing a leading '#'. Computed on the flu-relevant live sample only. The UCI list includes some common English words.",
+  "top_20_matched_keywords": [
+    {
+      "keyword": "flu",
+      "posts": 699,
+      "occurrences": 887
+    },
+    {
+      "keyword": "sick",
+      "posts": 200,
+      "occurrences": 230
+    },
+    {
+      "keyword": "fever",
+      "posts": 175,
+      "occurrences": 193
+    },
+    {
+      "keyword": "cough",
+      "posts": 172,
+      "occurrences": 194
+    },
+    {
+      "keyword": "shot",
+      "posts": 138,
+      "occurrences": 167
+    },
+    {
+      "keyword": "symptoms",
+      "posts": 138,
+      "occurrences": 167
+    },
+    {
+      "keyword": "cold",
+      "posts": 100,
+      "occurrences": 114
+    },
+    {
+      "keyword": "throat",
+      "posts": 96,
+      "occurrences": 101
+    },
+    {
+      "keyword": "body",
+      "posts": 92,
+      "occurrences": 112
+    },
+    {
+      "keyword": "vaccine",
+      "posts": 90,
+      "occurrences": 131
+    },
+    {
+      "keyword": "sore",
+      "posts": 90,
+      "occurrences": 92
+    },
+    {
+      "keyword": "season",
+      "posts": 88,
+      "occurrences": 92
+    },
+    {
+      "keyword": "around",
+      "posts": 78,
+      "occurrences": 83
+    },
+    {
+      "keyword": "aches",
+      "posts": 75,
+      "occurrences": 77
+    },
+    {
+      "keyword": "chills",
+      "posts": 67,
+      "occurrences": 70
+    },
+    {
+      "keyword": "caught",
+      "posts": 66,
+      "occurrences": 67
+    },
+    {
+      "keyword": "influenza",
+      "posts": 61,
+      "occurrences": 72
+    },
+    {
+      "keyword": "feeling",
+      "posts": 61,
+      "occurrences": 65
+    },
+    {
+      "keyword": "health",
+      "posts": 60,
+      "occurrences": 92
+    },
+    {
+      "keyword": "days",
+      "posts": 59,
+      "occurrences": 70
+    }
+  ],
+  "per_week": [
+    {
+      "n_posts": 119,
+      "n_keywords_appearing": 234,
+      "n_posts_with_at_least_one_dataset_keyword": 117,
+      "top_20_matched_keywords": [
+        {
+          "keyword": "flu",
+          "posts": 80,
+          "occurrences": 92
+        },
+        {
+          "keyword": "sick",
+          "posts": 26,
+          "occurrences": 28
+        },
+        {
+          "keyword": "shot",
+          "posts": 19,
+          "occurrences": 23
+        },
+        {
+          "keyword": "cough",
+          "posts": 15,
+          "occurrences": 17
+        },
+        {
+          "keyword": "fever",
+          "posts": 15,
+          "occurrences": 15
+        },
+        {
+          "keyword": "symptoms",
+          "posts": 14,
+          "occurrences": 14
+        },
+        {
+          "keyword": "vaccine",
+          "posts": 12,
+          "occurrences": 16
+        },
+        {
+          "keyword": "around",
+          "posts": 12,
+          "occurrences": 13
+        },
+        {
+          "keyword": "feeling",
+          "posts": 11,
+          "occurrences": 11
+        },
+        {
+          "keyword": "cold",
+          "posts": 10,
+          "occurrences": 11
+        },
+        {
+          "keyword": "body",
+          "posts": 10,
+          "occurrences": 10
+        },
+        {
+          "keyword": "vaccines",
+          "posts": 8,
+          "occurrences": 20
+        },
+        {
+          "keyword": "shots",
+          "posts": 8,
+          "occurrences": 9
+        },
+        {
+          "keyword": "virus",
+          "posts": 7,
+          "occurrences": 10
+        },
+        {
+          "keyword": "year",
+          "posts": 7,
+          "occurrences": 9
+        },
+        {
+          "keyword": "health",
+          "posts": 7,
+          "occurrences": 8
+        },
+        {
+          "keyword": "gave",
+          "posts": 7,
+          "occurrences": 7
+        },
+        {
+          "keyword": "headache",
+          "posts": 7,
+          "occurrences": 7
+        },
+        {
+          "keyword": "throat",
+          "posts": 6,
+          "occurrences": 7
+        },
+        {
+          "keyword": "cases",
+          "posts": 6,
+          "occurrences": 6
+        }
+      ],
+      "week": "2026-10-14 to 2026-10-20"
+    },
+    {
+      "n_posts": 128,
+      "n_keywords_appearing": 233,
+      "n_posts_with_at_least_one_dataset_keyword": 126,
+      "top_20_matched_keywords": [
+        {
+          "keyword": "flu",
+          "posts": 103,
+          "occurrences": 125
+        },
+        {
+          "keyword": "shot",
+          "posts": 25,
+          "occurrences": 30
+        },
+        {
+          "keyword": "sick",
+          "posts": 24,
+          "occurrences": 30
+        },
+        {
+          "keyword": "symptoms",
+          "posts": 22,
+          "occurrences": 25
+        },
+        {
+          "keyword": "cough",
+          "posts": 17,
+          "occurrences": 20
+        },
+        {
+          "keyword": "cold",
+          "posts": 15,
+          "occurrences": 18
+        },
+        {
+          "keyword": "feeling",
+          "posts": 10,
+          "occurrences": 12
+        },
+        {
+          "keyword": "vaccine",
+          "posts": 10,
+          "occurrences": 12
+        },
+        {
+          "keyword": "fever",
+          "posts": 10,
+          "occurrences": 11
+        },
+        {
+          "keyword": "around",
+          "posts": 10,
+          "occurrences": 10
+        },
+        {
+          "keyword": "days",
+          "posts": 9,
+          "occurrences": 10
+        },
+        {
+          "keyword": "weeks",
+          "posts": 9,
+          "occurrences": 10
+        },
+        {
+          "keyword": "cases",
+          "posts": 8,
+          "occurrences": 10
+        },
+        {
+          "keyword": "stomach",
+          "posts": 8,
+          "occurrences": 8
+        },
+        {
+          "keyword": "season",
+          "posts": 7,
+          "occurrences": 8
+        },
+        {
+          "keyword": "coughing",
+          "posts": 7,
+          "occurrences": 7
+        },
+        {
+          "keyword": "illness",
+          "posts": 7,
+          "occurrences": 7
+        },
+        {
+          "keyword": "respiratory",
+          "posts": 7,
+          "occurrences": 7
+        },
+        {
+          "keyword": "year",
+          "posts": 7,
+          "occurrences": 7
+        },
+        {
+          "keyword": "years",
+          "posts": 6,
+          "occurrences": 9
+        }
+      ],
+      "week": "2026-10-21 to 2026-10-27"
+    },
+    {
+      "n_posts": 136,
+      "n_keywords_appearing": 273,
+      "n_posts_with_at_least_one_dataset_keyword": 136,
+      "top_20_matched_keywords": [
+        {
+          "keyword": "flu",
+          "posts": 103,
+          "occurrences": 141
+        },
+        {
+          "keyword": "sick",
+          "posts": 35,
+          "occurrences": 43
+        },
+        {
+          "keyword": "cough",
+          "posts": 34,
+          "occurrences": 38
+        },
+        {
+          "keyword": "shot",
+          "posts": 27,
+          "occurrences": 30
+        },
+        {
+          "keyword": "symptoms",
+          "posts": 26,
+          "occurrences": 32
+        },
+        {
+          "keyword": "fever",
+          "posts": 23,
+          "occurrences": 24
+        },
+        {
+          "keyword": "cold",
+          "posts": 19,
+          "occurrences": 21
+        },
+        {
+          "keyword": "around",
+          "posts": 19,
+          "occurrences": 19
+        },
+        {
+          "keyword": "throat",
+          "posts": 12,
+          "occurrences": 12
+        },
+        {
+          "keyword": "vaccine",
+          "posts": 11,
+          "occurrences": 15
+        },
+        {
+          "keyword": "feeling",
+          "posts": 11,
+          "occurrences": 12
+        },
+        {
+          "keyword": "sore",
+          "posts": 11,
+          "occurrences": 11
+        },
+        {
+          "keyword": "work",
+          "posts": 10,
+          "occurrences": 11
+        },
+        {
+          "keyword": "home",
+          "posts": 10,
+          "occurrences": 10
+        },
+        {
+          "keyword": "cases",
+          "posts": 9,
+          "occurrences": 15
+        },
+        {
+          "keyword": "body",
+          "posts": 9,
+          "occurrences": 11
+        },
+        {
+          "keyword": "week",
+          "posts": 9,
+          "occurrences": 9
+        },
+        {
+          "keyword": "days",
+          "posts": 8,
+          "occurrences": 10
+        },
+        {
+          "keyword": "sinus",
+          "posts": 8,
+          "occurrences": 9
+        },
+        {
+          "keyword": "bed",
+          "posts": 8,
+          "occurrences": 8
+        }
+      ],
+      "week": "2026-10-28 to 2026-11-03"
+    },
+    {
+      "n_posts": 150,
+      "n_keywords_appearing": 279,
+      "n_posts_with_at_least_one_dataset_keyword": 150,
+      "top_20_matched_keywords": [
+        {
+          "keyword": "flu",
+          "posts": 129,
+          "occurrences": 181
+        },
+        {
+          "keyword": "fever",
+          "posts": 35,
+          "occurrences": 38
+        },
+        {
+          "keyword": "symptoms",
+          "posts": 34,
+          "occurrences": 40
+        },
+        {
+          "keyword": "body",
+          "posts": 32,
+          "occurrences": 34
+        },
+        {
+          "keyword": "sick",
+          "posts": 32,
+          "occurrences": 33
+        },
+        {
+          "keyword": "aches",
+          "posts": 30,
+          "occurrences": 30
+        },
+        {
+          "keyword": "cough",
+          "posts": 29,
+          "occurrences": 33
+        },
+        {
+          "keyword": "cold",
+          "posts": 21,
+          "occurrences": 23
+        },
+        {
+          "keyword": "shot",
+          "posts": 20,
+          "occurrences": 24
+        },
+        {
+          "keyword": "vaccine",
+          "posts": 16,
+          "occurrences": 33
+        },
+        {
+          "keyword": "feeling",
+          "posts": 16,
+          "occurrences": 17
+        },
+        {
+          "keyword": "around",
+          "posts": 15,
+          "occurrences": 17
+        },
+        {
+          "keyword": "chills",
+          "posts": 14,
+          "occurrences": 16
+        },
+        {
+          "keyword": "throat",
+          "posts": 14,
+          "occurrences": 14
+        },
+        {
+          "keyword": "week",
+          "posts": 12,
+          "occurrences": 12
+        },
+        {
+          "keyword": "year",
+          "posts": 11,
+          "occurrences": 15
+        },
+        {
+          "keyword": "cases",
+          "posts": 11,
+          "occurrences": 12
+        },
+        {
+          "keyword": "sore",
+          "posts": 11,
+          "occurrences": 11
+        },
+        {
+          "keyword": "coming",
+          "posts": 10,
+          "occurrences": 10
+        },
+        {
+          "keyword": "early",
+          "posts": 9,
+          "occurrences": 11
+        }
+      ],
+      "week": "2026-11-04 to 2026-11-10"
+    },
+    {
+      "n_posts": 427,
+      "n_keywords_appearing": 382,
+      "n_posts_with_at_least_one_dataset_keyword": 427,
+      "top_20_matched_keywords": [
+        {
+          "keyword": "flu",
+          "posts": 284,
+          "occurrences": 348
+        },
+        {
+          "keyword": "fever",
+          "posts": 92,
+          "occurrences": 105
+        },
+        {
+          "keyword": "sick",
+          "posts": 83,
+          "occurrences": 96
+        },
+        {
+          "keyword": "cough",
+          "posts": 77,
+          "occurrences": 86
+        },
+        {
+          "keyword": "season",
+          "posts": 62,
+          "occurrences": 65
+        },
+        {
+          "keyword": "throat",
+          "posts": 58,
+          "occurrences": 62
+        },
+        {
+          "keyword": "sore",
+          "posts": 57,
+          "occurrences": 59
+        },
+        {
+          "keyword": "caught",
+          "posts": 51,
+          "occurrences": 52
+        },
+        {
+          "keyword": "influenza",
+          "posts": 48,
+          "occurrences": 54
+        },
+        {
+          "keyword": "chills",
+          "posts": 48,
+          "occurrences": 49
+        },
+        {
+          "keyword": "shot",
+          "posts": 47,
+          "occurrences": 60
+        },
+        {
+          "keyword": "symptoms",
+          "posts": 42,
+          "occurrences": 56
+        },
+        {
+          "keyword": "vaccine",
+          "posts": 41,
+          "occurrences": 55
+        },
+        {
+          "keyword": "body",
+          "posts": 36,
+          "occurrences": 52
+        },
+        {
+          "keyword": "health",
+          "posts": 35,
+          "occurrences": 44
+        },
+        {
+          "keyword": "cold",
+          "posts": 35,
+          "occurrences": 41
+        },
+        {
+          "keyword": "days",
+          "posts": 32,
+          "occurrences": 40
+        },
+        {
+          "keyword": "aches",
+          "posts": 31,
+          "occurrences": 32
+        },
+        {
+          "keyword": "early",
+          "posts": 28,
+          "occurrences": 31
+        },
+        {
+          "keyword": "headache",
+          "posts": 26,
+          "occurrences": 28
+        }
+      ],
+      "week": "2026-11-11 to 2026-11-13"
+    }
+  ]
+}

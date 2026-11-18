@@ -1,0 +1,128 @@
+{
+ "name": "Ensemble (calibrated LightGBM + LogReg-L1)",
+ "members": [
+  "LightGBM | base + temporal",
+  "LogReg-L1 | base + temporal"
+ ],
+ "weights": [
+  0.45,
+  0.55
+ ],
+ "member_files": {
+  "LightGBM | base + temporal": "improved_member1.joblib",
+  "LogReg-L1 | base + temporal": "improved_member2.joblib"
+ },
+ "calibration": {
+  "LightGBM | base + temporal": {
+   "method": "Platt",
+   "slope": 0.3751549937477882,
+   "intercept": -0.4231226927025312
+  },
+  "LogReg-L1 | base + temporal": {
+   "method": "Platt",
+   "slope": 1.470405511841586,
+   "intercept": -2.5165430746890483
+  }
+ },
+ "feature_sets": {
+  "LightGBM | base + temporal": "base + temporal",
+  "LogReg-L1 | base + temporal": "base + temporal"
+ },
+ "settings": {
+  "LightGBM | base + temporal": "{\"num_leaves\": 31, \"min_child_samples\": 200, \"n_estimators\": 200}",
+  "LogReg-L1 | base + temporal": "{\"C\": 0.005}"
+ },
+ "operating_points": {
+  "best F1": 0.2195488142339776,
+  "best MCC": 0.2195488142339776,
+  "early warning (val recall >= 0.80)": 0.08625263147416315
+ },
+ "temporal": {
+  "series": [
+   "aux_00",
+   "aux_01",
+   "aux_02",
+   "aux_03",
+   "aux_04",
+   "aux_05",
+   "aux_06",
+   "aux_07",
+   "aux_08",
+   "aux_09",
+   "aux_10",
+   "aux_11",
+   "aux_12",
+   "aux_13",
+   "aux_14",
+   "aux_15",
+   "aux_16",
+   "aux_17",
+   "aux_18",
+   "aux_19",
+   "flu",
+   "sick",
+   "stomach",
+   "cold",
+   "week",
+   "swine",
+   "work",
+   "days",
+   "feeling",
+   "home",
+   "around",
+   "season",
+   "bed",
+   "symptoms",
+   "away",
+   "year",
+   "fever",
+   "sucks",
+   "tomorrow",
+   "tonight",
+   "coming",
+   "soon",
+   "bug",
+   "body",
+   "since",
+   "caught",
+   "sleep",
+   "school",
+   "throat",
+   "weekend",
+   "catch",
+   "worst",
+   "cough",
+   "morning",
+   "house",
+   "virus",
+   "bird",
+   "next",
+   "worse",
+   "fun",
+   "food",
+   "two",
+   "gave",
+   "pretty",
+   "care",
+   "weeks",
+   "infection",
+   "ill",
+   "thanks",
+   "stay",
+   "kw_total"
+  ],
+  "lags": [
+   1,
+   2,
+   4,
+   7,
+   14
+  ],
+  "windows": [
+   7,
+   28
+  ],
+  "top_keywords": 50
+ },
+ "note": "Probabilities are Platt/isotonic-calibrated on the training-period validation block (steps 657-1094). Temporal features need each state's history, so the improved model is shown for the test-set lookup only."
+}

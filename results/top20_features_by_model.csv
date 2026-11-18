@@ -1,0 +1,21 @@
+,LogReg-L1,LogReg-L2,Bayesian-LR (horseshoe),RandomForest,XGBoost,LightGBM
+1,aux_19,summer,house,flu,flu,aux_19
+2,summer,swine,family,sick,jab,flu
+3,swine,aux_19,tested,aux_19,vai,swine
+4,tested,stomach,strep,aux_17,aku,stomach
+5,jab,jab,aux_19,aux_18,lagi,summer
+6,stomach,allergies,season,aux_15,condom,bird
+7,allergies,tested,test,aux_14,summer,aux_02
+8,flu,flu,flu,house,banget,house
+9,aux_02,family,aux_18,aux_12,slime,aux_16
+10,2013,bird,aux_07,aux_13,strep,around
+11,family,house,around,aux_16,gini,cold
+12,bird,aux_18,bronchitis,around,ini,family
+13,house,2013,dad,aux_10,12s,aux_17
+14,snow,snow,aux_17,swine,doctor,sick
+15,spring,spring,feeling,aux_07,sick,sucks
+16,around,around,2013,aux_08,work,symptoms
+17,pra,thera,aux_16,aux_11,aux_19,allergies
+18,tea,aux_17,aux_08,aux_06,pra,aux_00
+19,thera,tea,stay,home,bgt,aux_01
+20,swag,holidays,doctor,sucks,bronchitis,year

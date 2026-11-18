@@ -1,0 +1,2103 @@
+{
+  "source": "Public X (Twitter) posts retrieved 13 Nov 2026 via the X search and recent-counts APIs, anonymised (no usernames or author IDs retained), for illustration only in the Live X demo tab. This live sample is not part of the evaluated dissertation results, which use the UCI influenza outbreak dataset (Zhao, 2015). There is no full-archive counts tool in the available X connector (only get_posts_counts_recent, which covers the last 7 days). search_posts_all was used for the 14 Oct–13 Nov post sample and for mid-month outbreak-signal daily volumes; that search endpoint caps each call at 25 posts even if a higher max_results is requested. The X search API does not accept since: in the query string; windows were sent as start_time/end_time. Self-reported illness phrases were paired with flu or respiratory context (flu OR fever OR cough OR 'sore throat' OR chills). Confounders (COVID, RSV, stomach flu) and avian influenza (bird flu / H5N1) are tagged separately for filtering and are not mixed into seasonal-flu outbreak totals.",
+  "retrieved_at": "2026-11-13T12:49:00Z",
+  "retrieved_at_sast": "2026-11-13 14:49:00 SAST (Africa/Johannesburg)",
+  "limits": {
+    "no_full_archive_counts_tool": true,
+    "get_posts_counts_recent_window": {
+      "start_time": "2026-11-06T12:50:00Z",
+      "end_time": "2026-11-13T12:50:00Z",
+      "notes": "First and last official buckets are partial UTC days."
+    },
+    "search_posts_all_page_cap": 25,
+    "max_results_note": "Requests for 100 results were lowered by the API to 25, the most one call can return."
+  },
+  "official_7_day": {
+    "avian": {
+      "query": "(\"bird flu\" OR H5N1 OR \"avian influenza\" OR \"avian flu\") lang:en -is:retweet",
+      "theme": "avian",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 2074,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 187,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 255,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 135,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 189,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 259,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 502,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 408,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:25.000Z",
+          "tweet_count": 139,
+          "partial_day": true
+        }
+      ]
+    },
+    "body_aches": {
+      "query": "\"body aches\" lang:en -is:retweet",
+      "theme": "systemic",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 565,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 26,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 59,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 68,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 95,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 97,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 72,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 102,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:17.000Z",
+          "tweet_count": 46,
+          "partial_day": true
+        }
+      ]
+    },
+    "chills": {
+      "query": "chills lang:en -is:retweet",
+      "theme": "systemic",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 15016,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 1141,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 1971,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 2137,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 1978,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 2046,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 2275,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 2340,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:18.000Z",
+          "tweet_count": 1128,
+          "partial_day": true
+        }
+      ]
+    },
+    "congestion_nasal": {
+      "query": "(congestion OR congested OR nasal) lang:en -is:retweet",
+      "theme": "nasal",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 14791,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 1260,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 2040,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 1656,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 2171,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 2287,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 2203,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 2186,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:19.000Z",
+          "tweet_count": 988,
+          "partial_day": true
+        }
+      ]
+    },
+    "cough_coughing": {
+      "query": "(cough OR coughing) lang:en -is:retweet",
+      "theme": "respiratory",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 28340,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 2466,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 3901,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 3824,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 4159,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 4325,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 4036,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 3840,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:16.000Z",
+          "tweet_count": 1789,
+          "partial_day": true
+        }
+      ]
+    },
+    "covid": {
+      "query": "(covid OR covid-19 OR coronavirus OR \"COVID-19\") lang:en -is:retweet",
+      "theme": "confounders",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 114384,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 11254,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 15756,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 15066,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 16135,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 17332,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 16856,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 15626,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:26.000Z",
+          "tweet_count": 6359,
+          "partial_day": true
+        }
+      ]
+    },
+    "fatigue_exhausted": {
+      "query": "(fatigue OR exhausted) lang:en -is:retweet",
+      "theme": "systemic",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 71848,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 5762,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 9353,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 9294,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 9960,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 10994,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 11232,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 10523,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:19.000Z",
+          "tweet_count": 4730,
+          "partial_day": true
+        }
+      ]
+    },
+    "feeling_sick_under_weather": {
+      "query": "(\"feeling sick\" OR \"under the weather\") lang:en -is:retweet",
+      "theme": "systemic",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 3000,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 235,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 373,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 377,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 501,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 461,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 430,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 444,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:19.000Z",
+          "tweet_count": 179,
+          "partial_day": true
+        }
+      ]
+    },
+    "fever": {
+      "query": "fever lang:en -is:retweet",
+      "theme": "systemic",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 32743,
+      "daily": [
+        {
+          "start": "2026-11-06T12:40:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 2682,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 4490,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 4492,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 4989,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 4780,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 4664,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 4660,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:33:17.000Z",
+          "tweet_count": 1986,
+          "partial_day": true
+        }
+      ]
+    },
+    "flu": {
+      "query": "flu lang:en -is:retweet",
+      "theme": "core",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 22256,
+      "daily": [
+        {
+          "start": "2026-11-06T12:40:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 1816,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 2774,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 2523,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 3021,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 3455,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 3808,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 3486,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:33:17.000Z",
+          "tweet_count": 1373,
+          "partial_day": true
+        }
+      ]
+    },
+    "flu_season": {
+      "query": "\"flu season\" lang:en -is:retweet",
+      "theme": "core",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 984,
+      "daily": [
+        {
+          "start": "2026-11-06T12:40:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 92,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 180,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 101,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 122,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 151,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 136,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 151,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:33:18.000Z",
+          "tweet_count": 51,
+          "partial_day": true
+        }
+      ]
+    },
+    "flu_shot": {
+      "query": "\"flu shot\" lang:en -is:retweet",
+      "theme": "vaccine",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 2375,
+      "daily": [
+        {
+          "start": "2026-11-06T12:40:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 213,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 303,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 245,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 307,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 395,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 374,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 393,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:33:18.000Z",
+          "tweet_count": 145,
+          "partial_day": true
+        }
+      ]
+    },
+    "flu_symptoms_like": {
+      "query": "(\"flu symptoms\" OR \"flu-like\" OR \"flu like\") lang:en -is:retweet",
+      "theme": "respiratory",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 483,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 29,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 39,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 49,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 100,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 90,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 73,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 70,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:16.000Z",
+          "tweet_count": 33,
+          "partial_day": true
+        }
+      ]
+    },
+    "flu_vaccine": {
+      "query": "\"flu vaccine\" lang:en -is:retweet",
+      "theme": "vaccine",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 932,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 80,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 109,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 90,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 168,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 172,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 143,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 124,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:29.000Z",
+          "tweet_count": 46,
+          "partial_day": true
+        }
+      ]
+    },
+    "headache": {
+      "query": "headache lang:en -is:retweet",
+      "theme": "systemic",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 31376,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 2472,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 4155,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 4064,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 4525,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 4766,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 4791,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 4598,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:17.000Z",
+          "tweet_count": 2005,
+          "partial_day": true
+        }
+      ]
+    },
+    "influenza": {
+      "query": "influenza lang:en -is:retweet",
+      "theme": "core",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 2479,
+      "daily": [
+        {
+          "start": "2026-11-06T12:40:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 260,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 293,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 193,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 408,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 387,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 425,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 398,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:33:17.000Z",
+          "tweet_count": 115,
+          "partial_day": true
+        }
+      ]
+    },
+    "nose_phrases": {
+      "query": "(\"runny nose\" OR \"stuffy nose\" OR \"blocked nose\" OR \"wiping nose\") lang:en -is:retweet",
+      "theme": "nasal",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 1349,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 103,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 176,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 174,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 186,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 230,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 178,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 190,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:19.000Z",
+          "tweet_count": 112,
+          "partial_day": true
+        }
+      ]
+    },
+    "phlegm_mucus": {
+      "query": "(phlegm OR mucus) lang:en -is:retweet",
+      "theme": "respiratory",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 4313,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 438,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 541,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 512,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 655,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 595,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 631,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 723,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:16.000Z",
+          "tweet_count": 218,
+          "partial_day": true
+        }
+      ]
+    },
+    "rsv": {
+      "query": "RSV lang:en -is:retweet",
+      "theme": "confounders",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 1477,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 156,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 170,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 156,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 231,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 256,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 162,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 239,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:27.000Z",
+          "tweet_count": 107,
+          "partial_day": true
+        }
+      ]
+    },
+    "sinus": {
+      "query": "sinus lang:en -is:retweet",
+      "theme": "nasal",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 1954,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 149,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 287,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 242,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 329,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 308,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 269,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 264,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:19.000Z",
+          "tweet_count": 106,
+          "partial_day": true
+        }
+      ]
+    },
+    "sneeze_sneezing": {
+      "query": "(sneeze OR sneezing) lang:en -is:retweet",
+      "theme": "respiratory",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 7201,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 523,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 857,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 896,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 1115,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 1273,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 1017,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 1076,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:16.000Z",
+          "tweet_count": 444,
+          "partial_day": true
+        }
+      ]
+    },
+    "sore_throat": {
+      "query": "\"sore throat\" lang:en -is:retweet",
+      "theme": "respiratory",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 2514,
+      "daily": [
+        {
+          "start": "2026-11-06T12:40:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 163,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 289,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 373,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 392,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 406,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 389,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 358,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:33:18.000Z",
+          "tweet_count": 144,
+          "partial_day": true
+        }
+      ]
+    },
+    "stomach_flu": {
+      "query": "\"stomach flu\" lang:en -is:retweet",
+      "theme": "confounders",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 113,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 12,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 14,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 10,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 14,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 19,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 19,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 16,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:26.000Z",
+          "tweet_count": 9,
+          "partial_day": true
+        }
+      ]
+    },
+    "tamiflu": {
+      "query": "Tamiflu lang:en -is:retweet",
+      "theme": "treatment",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 51,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 5,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 8,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 12,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 4,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 10,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 2,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 9,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:25.000Z",
+          "tweet_count": 1,
+          "partial_day": true
+        }
+      ]
+    },
+    "theme_confounders": {
+      "query": "(\"stomach flu\" OR covid OR covid-19 OR coronavirus OR \"COVID-19\" OR RSV) lang:en -is:retweet",
+      "theme": "confounders",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 115670,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 11390,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 15902,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 15212,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 16336,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 17542,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 17001,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 15840,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:29.000Z",
+          "tweet_count": 6447,
+          "partial_day": true
+        }
+      ]
+    },
+    "theme_nasal": {
+      "query": "(sinus OR \"runny nose\" OR \"stuffy nose\" OR \"blocked nose\" OR \"wiping nose\" OR congestion OR congested OR nasal) lang:en -is:retweet",
+      "theme": "nasal",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 17891,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 1489,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 2480,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 2052,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 2648,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 2792,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 2624,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 2610,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:28.000Z",
+          "tweet_count": 1196,
+          "partial_day": true
+        }
+      ]
+    },
+    "theme_outbreak_signals": {
+      "query": "(\"flu outbreak\" OR \"flu cases\" OR \"hospital flu\" OR \"ER flu\" OR \"flu spreading\" OR \"school closed flu\" OR \"whole office sick\" OR \"half the class sick\" OR (flu \"everyone is sick\") OR (flu \"going around\") OR (\"going around\" (flu OR fever OR cough))) lang:en -is:retweet",
+      "theme": "outbreak_signals",
+      "flu_anchored": true,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 463,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 36,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 47,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 46,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 58,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 68,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 87,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 85,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:45:17.000Z",
+          "tweet_count": 36,
+          "partial_day": true
+        }
+      ]
+    },
+    "theme_respiratory": {
+      "query": "(cough OR coughing OR sneeze OR sneezing OR phlegm OR mucus OR \"flu symptoms\" OR \"flu-like\" OR \"flu like\") lang:en -is:retweet",
+      "theme": "respiratory",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 39523,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 3388,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 5243,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 5185,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 5901,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 6154,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 5633,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 5588,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:27.000Z",
+          "tweet_count": 2431,
+          "partial_day": true
+        }
+      ]
+    },
+    "theme_self_reported": {
+      "query": "(\"i feel sick\" OR \"feeling sick\" OR \"don't feel so well\" OR \"dont feel well\" OR \"not feeling well\" OR \"feel like crap\" OR \"feeling awful\" OR \"feel terrible\" OR \"so sick\" OR \"home sick\" OR \"sick in bed\" OR \"calling in sick\" OR \"called in sick\" OR \"getting sick\" OR \"coming down with\" OR \"under the weather\") lang:en -is:retweet",
+      "theme": "self_reported_illness",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 54852,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 4329,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 7217,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 7549,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 7868,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 8380,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 8063,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 7863,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:44:08.000Z",
+          "tweet_count": 3583,
+          "partial_day": true
+        }
+      ]
+    },
+    "theme_self_reported_flu_anchored": {
+      "query": "(\"i feel sick\" OR \"feeling sick\" OR \"don't feel so well\" OR \"dont feel well\" OR \"not feeling well\" OR \"feel like crap\" OR \"feeling awful\" OR \"feel terrible\" OR \"so sick\" OR \"home sick\" OR \"sick in bed\" OR \"calling in sick\" OR \"called in sick\" OR \"getting sick\" OR \"coming down with\" OR \"under the weather\") (flu OR fever OR cough OR \"sore throat\" OR chills) lang:en -is:retweet",
+      "theme": "self_reported_illness",
+      "flu_anchored": true,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 545,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 44,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 80,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 56,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 97,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 81,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 66,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 87,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:45:16.000Z",
+          "tweet_count": 34,
+          "partial_day": true
+        }
+      ]
+    },
+    "theme_systemic": {
+      "query": "(headache OR \"body aches\" OR chills OR fatigue OR exhausted OR \"feeling sick\" OR \"under the weather\") lang:en -is:retweet",
+      "theme": "systemic",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 121340,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 9614,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 15870,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 15876,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 16994,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 18274,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 18732,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 17933,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:27.000Z",
+          "tweet_count": 8047,
+          "partial_day": true
+        }
+      ]
+    },
+    "theme_treatment": {
+      "query": "(Tamiflu OR tissues) lang:en -is:retweet",
+      "theme": "treatment",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 6611,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 523,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 861,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 893,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 880,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 985,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 1059,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 1034,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:28.000Z",
+          "tweet_count": 376,
+          "partial_day": true
+        }
+      ]
+    },
+    "tissues": {
+      "query": "tissues lang:en -is:retweet",
+      "theme": "treatment",
+      "flu_anchored": false,
+      "source": "get_posts_counts_recent",
+      "total_tweet_count": 6560,
+      "daily": [
+        {
+          "start": "2026-11-06T12:50:00.000Z",
+          "end": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 518,
+          "partial_day": true
+        },
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 853,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 881,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "end": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 876,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "end": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 975,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "end": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 1057,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-13T00:00:00.000Z",
+          "tweet_count": 1025,
+          "partial_day": false
+        },
+        {
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T12:43:25.000Z",
+          "tweet_count": 375,
+          "partial_day": true
+        }
+      ]
+    }
+  },
+  "outbreak_signals_30_day_from_paginated_search": {
+    "query": "(\"flu outbreak\" OR \"flu cases\" OR \"hospital flu\" OR \"ER flu\" OR \"flu spreading\" OR \"school closed flu\" OR \"whole office sick\" OR \"half the class sick\" OR (flu \"everyone is sick\") OR (flu \"going around\") OR (\"going around\" (flu OR fever OR cough))) lang:en -is:retweet",
+    "coverage": "Daily totals for 14–27 Oct 2026 were built by paginating search_posts_all. Days marked complete=true are exhausted pages (full daily totals). Days marked complete=false are lower bounds only. 6–13 Nov official totals come from get_posts_counts_recent and should be used for that week. 28 Oct–5 Nov were not fully paginated (call budget); no invented values are supplied for those days.",
+    "daily": [
+      {
+        "day": "2026-10-14",
+        "start": "2026-10-14T00:00:00Z",
+        "end": "2026-10-15T00:00:00Z",
+        "tweet_count": 66,
+        "complete": false,
+        "pages_retrieved": 3,
+        "note": "lower bound; more pages remain"
+      },
+      {
+        "day": "2026-10-15",
+        "start": "2026-10-15T00:00:00Z",
+        "end": "2026-10-16T00:00:00Z",
+        "tweet_count": 56,
+        "complete": false,
+        "pages_retrieved": 3,
+        "note": "lower bound; more pages remain"
+      },
+      {
+        "day": "2026-10-16",
+        "start": "2026-10-16T00:00:00Z",
+        "end": "2026-10-17T00:00:00Z",
+        "tweet_count": 61,
+        "complete": false,
+        "pages_retrieved": 3,
+        "note": "lower bound; more pages remain"
+      },
+      {
+        "day": "2026-10-17",
+        "start": "2026-10-17T00:00:00Z",
+        "end": "2026-10-18T00:00:00Z",
+        "tweet_count": 53,
+        "complete": false,
+        "pages_retrieved": 3,
+        "note": "lower bound; more pages remain"
+      },
+      {
+        "day": "2026-10-18",
+        "start": "2026-10-18T00:00:00Z",
+        "end": "2026-10-19T00:00:00Z",
+        "tweet_count": 36,
+        "complete": true,
+        "pages_retrieved": 3,
+        "note": "complete daily total"
+      },
+      {
+        "day": "2026-10-19",
+        "start": "2026-10-19T00:00:00Z",
+        "end": "2026-10-20T00:00:00Z",
+        "tweet_count": 44,
+        "complete": true,
+        "pages_retrieved": 3,
+        "note": "complete daily total"
+      },
+      {
+        "day": "2026-10-20",
+        "start": "2026-10-20T00:00:00Z",
+        "end": "2026-10-21T00:00:00Z",
+        "tweet_count": 63,
+        "complete": false,
+        "pages_retrieved": 3,
+        "note": "lower bound; more pages remain"
+      },
+      {
+        "day": "2026-10-21",
+        "start": "2026-10-21T00:00:00Z",
+        "end": "2026-10-22T00:00:00Z",
+        "tweet_count": 47,
+        "complete": false,
+        "pages_retrieved": 2,
+        "note": "lower bound; more pages remain"
+      },
+      {
+        "day": "2026-10-22",
+        "start": "2026-10-22T00:00:00Z",
+        "end": "2026-10-23T00:00:00Z",
+        "tweet_count": 45,
+        "complete": false,
+        "pages_retrieved": 2,
+        "note": "lower bound; more pages remain"
+      },
+      {
+        "day": "2026-10-23",
+        "start": "2026-10-23T00:00:00Z",
+        "end": "2026-10-24T00:00:00Z",
+        "tweet_count": 47,
+        "complete": false,
+        "pages_retrieved": 2,
+        "note": "lower bound; more pages remain"
+      },
+      {
+        "day": "2026-10-24",
+        "start": "2026-10-24T00:00:00Z",
+        "end": "2026-10-25T00:00:00Z",
+        "tweet_count": 48,
+        "complete": false,
+        "pages_retrieved": 2,
+        "note": "lower bound; more pages remain"
+      },
+      {
+        "day": "2026-10-25",
+        "start": "2026-10-25T00:00:00Z",
+        "end": "2026-10-26T00:00:00Z",
+        "tweet_count": 44,
+        "complete": false,
+        "pages_retrieved": 2,
+        "note": "lower bound; more pages remain"
+      },
+      {
+        "day": "2026-10-26",
+        "start": "2026-10-26T00:00:00Z",
+        "end": "2026-10-27T00:00:00Z",
+        "tweet_count": 46,
+        "complete": false,
+        "pages_retrieved": 2,
+        "note": "lower bound; more pages remain"
+      },
+      {
+        "day": "2026-10-27",
+        "start": "2026-10-27T00:00:00Z",
+        "end": "2026-10-28T00:00:00Z",
+        "tweet_count": 49,
+        "complete": false,
+        "pages_retrieved": 2,
+        "note": "lower bound; more pages remain"
+      }
+    ],
+    "complete_days": [
+      "2026-10-18",
+      "2026-10-19"
+    ],
+    "lower_bound_days": [
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27"
+    ]
+  },
+  "outbreak_signals_weekly_summary": [
+    {
+      "week": "2026-10-14 to 2026-10-20",
+      "n_days_observed": 7,
+      "n_complete_days": 2,
+      "sum_complete_days_only": 80,
+      "sum_including_lower_bounds": 379,
+      "peak_observed_day": "2026-10-14",
+      "peak_observed_count": 66,
+      "peak_is_complete": false
+    },
+    {
+      "week": "2026-10-21 to 2026-10-27",
+      "n_days_observed": 7,
+      "n_complete_days": 0,
+      "sum_complete_days_only": 0,
+      "sum_including_lower_bounds": 326,
+      "peak_observed_day": "2026-10-27",
+      "peak_observed_count": 49,
+      "peak_is_complete": false
+    },
+    {
+      "week": "2026-11-06 to 2026-11-13 (official recent-counts; includes two partial days in the raw series)",
+      "official_total_including_partials": 463,
+      "sum_full_utc_days_only": 391,
+      "peak_full_day_start": "2026-11-11T00:00:00.000Z",
+      "peak_full_day_count": 87,
+      "full_day_counts": [
+        {
+          "start": "2026-11-07T00:00:00.000Z",
+          "tweet_count": 47
+        },
+        {
+          "start": "2026-11-08T00:00:00.000Z",
+          "tweet_count": 46
+        },
+        {
+          "start": "2026-11-09T00:00:00.000Z",
+          "tweet_count": 58
+        },
+        {
+          "start": "2026-11-10T00:00:00.000Z",
+          "tweet_count": 68
+        },
+        {
+          "start": "2026-11-11T00:00:00.000Z",
+          "tweet_count": 87
+        },
+        {
+          "start": "2026-11-12T00:00:00.000Z",
+          "tweet_count": 85
+        }
+      ]
+    }
+  ]
+}

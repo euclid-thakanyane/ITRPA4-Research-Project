@@ -1,0 +1,36 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Notebooks / Jupyter
+.ipynb_checkpoints/
+
+# Raw UCI dataset and large regenerated feature caches (download / re-run, do not commit)
+*.mat
+influenza_outbreak_dataset.mat
+X_test_temporal_*.npz
+
+# Secrets and local env
+.env
+.env.*
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

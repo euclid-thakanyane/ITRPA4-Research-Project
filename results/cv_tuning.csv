@@ -1,0 +1,10 @@
+,best_params,cv_pr_auc,oof_pr_auc
+LogReg-L1,{'clf__C': 0.1},0.3704186039598668,0.37000805236283546
+LogReg-L2,{'clf__C': 0.1},0.36608910889121227,0.3650401910900383
+Poisson-count,n/a,,0.34918920162235345
+NegBin-count,n/a,,0.39950881608428385
+Bayesian-LR (horseshoe),"PyMC 6.4.0 horseshoe prior, mean-field ADVI (30k iters, 1000 draws), top-50 chi2 features",,
+RandomForest,"{'max_depth': None, 'min_samples_leaf': 5}",0.33376378325467415,0.33260383839106245
+XGBoost,"{'learning_rate': 0.05, 'max_depth': 4, 'n_estimators': 400}",0.3723469255215769,0.37112167878411184
+LightGBM,"{'learning_rate': 0.05, 'n_estimators': 400, 'num_leaves': 15}",0.3850138182280881,0.3843378739998716
+MLP,{'clf__alpha': 0.001},0.2045720499311235,0.20359285367208962

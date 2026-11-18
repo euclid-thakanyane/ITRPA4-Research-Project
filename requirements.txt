@@ -1,0 +1,18 @@
+# Notebook (itrpa_experiments.ipynb) and model-loading dependencies.
+# Saved models were produced with scikit-learn 1.9.1, LightGBM 4.7.0 and XGBoost 3.4.1
+# (see results_summary.md, Environment). For tests: also pip install -r requirements-dev.txt
+# For the Streamlit prototype: also pip install -r prototype/requirements.txt
+numpy
+scipy
+pandas
+scikit-learn>=1.5
+imbalanced-learn
+lightgbm
+xgboost
+statsmodels
+pymc            # optional: Bayesian LR falls back to a Laplace approximation if PyMC is missing
+shap            # used for the SHAP summary plot
+matplotlib
+tabulate        # pandas.to_markdown for results_summary.md
+joblib
+jupyter
